@@ -3,7 +3,7 @@ var CONFIG = {
   loginUrl: "https://platform.getmeida.com/login",   // adresse de votre plateforme
   email: "contact@meida.dz",                // e-mail de contact
   whatsapp: "",                             // ex. "213550123456" (indicatif sans +). Vide = bouton masqué
-  formEndpoint: ""                          // optionnel : URL Formspree / Getform. Vide = ouverture de l'e-mail
+  formEndpoint: "https://platform.getmeida.com/leads" // demandes enregistrées dans Meida (admin > Prospects). Vide = ouverture de l'e-mail
 };
 /* ===================================================================== */
 (function () {
@@ -215,6 +215,7 @@ var CONFIG = {
     $("#r-rev").textContent = fmt(rev) + " " + cur; $("#r-leak").textContent = fmt(leak) + " " + cur;
     $("#r-plan").textContent = planNow;
   }
+  $("#calc").addEventListener("submit", function (e) { e.preventDefault(); });
   $$("#calc input").forEach(function (i) { i.addEventListener("input", renderCalc); i.addEventListener("change", renderCalc); });
   var rcta = $("#r-cta"); if (rcta) rcta.addEventListener("click", function () { if (fPlan) fPlan.value = planNow; });
 
