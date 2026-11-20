@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meida | La plateforme de gestion pour restaurants, cafés et fast-foods</title>
+<meta name="description" content="Meida réunit caisse, cuisine, menu QR et rapports dans une seule plateforme. De la commande à la caisse, pour les restaurants, cafés, fast-foods et lounges en Algérie.">
+<meta name="theme-color" content="#234737">
+<link rel="canonical" href="https://getmeida.com/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/InterDisplay-Black.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_DZ">
+<meta property="og:site_name" content="Meida">
+<meta property="og:title" content="Meida | Une plateforme. De la commande à la caisse.">
+<meta property="og:description" content="Caisse, cuisine, menu QR et rapports dans une seule plateforme pour restaurants, cafés et fast-foods en Algérie.">
+<meta property="og:url" content="https://getmeida.com/">
+<meta property="og:image" content="https://getmeida.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Meida","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Plateforme de gestion pour restaurants, cafés et fast-foods : caisse, cuisine, menu QR, rapports.","publisher":{"@type":"Organization","name":"Dzira Technology","url":"https://getmeida.com/"}}</script>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Meida"><img src="assets/wm_green.png" alt="Meida" width="120" height="45"></a>
+    <input type="checkbox" id="nav-toggle" aria-label="Menu">
+    <label class="burger" for="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+    <ul class="menu" id="menu">
+      <li><a href="#meida" data-i18n="nav_meida">Meida</a></li>
+      <li><a href="#apercu" data-i18n="nav_tour">Aperçu</a></li>
+      <li><a href="#fonctions" data-i18n="nav_features">Fonctions</a></li>
+      <li><a href="#calculateur" data-i18n="nav_calc">Calculateur</a></li>
+      <li><a href="#offres" data-i18n="nav_offers">Offres</a></li>
+      <li><a href="#faq" data-i18n="nav_faq">Questions</a></li>
+      <li class="lang-li"><button class="lang" id="lang" type="button" aria-label="Changer de langue / تغيير اللغة"><span data-lang-label>العربية</span></button></li>
+      <li><a class="btn btn-primary btn-sm" data-login href="https://platform.getmeida.com/login" data-i18n="login">Se connecter</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow" data-i18n="hero_eyebrow">Gestion de restaurant</span>
+      <h1><span data-i18n="hero_h1a">Une plateforme.</span><br><em data-i18n="hero_h1b">De la commande à la caisse.</em></h1>
+      <p class="lead" data-i18n="hero_lead">Meida remplace les tickets papier, les calculettes et les comptes approximatifs de fin de journée par un système simple que toute votre équipe utilise.</p>
+      <div class="cta">
+        <a class="btn btn-primary" data-login href="https://platform.getmeida.com/login" data-i18n="hero_cta1">Accéder à ma plateforme</a>
+        <a class="btn btn-ghost" href="#contact" data-i18n="hero_cta2">Demander une démo</a>
+      </div>
+      <div class="trust">
+        <span data-i18n="trust1">Français et arabe</span>
+        <span data-i18n="trust2">Installation et formation incluses</span>
+        <span data-i18n="trust3">Tarification sur devis</span>
+      </div>
+    </div>
+    <div class="mock" role="img" aria-label="Aperçu du tableau de bord Meida">
+      <div class="mock-bar"><i></i><i></i><i></i><span class="url">platform.getmeida.com</span></div>
+      <div class="mock-top"><b data-i18n="m_today">Aujourd'hui</b><span class="pill"><i class="dot"></i><span data-i18n="m_live">EN DIRECT</span></span></div>
+      <div class="kpis">
+        <div class="kpi"><small data-i18n="m_sales">Ventes</small><strong><span id="k-sales" data-v="84500">84 500</span> DA</strong></div>
+        <div class="kpi"><small data-i18n="m_orders">Commandes</small><strong id="k-orders" data-v="63">63</strong></div>
+        <div class="kpi"><small data-i18n="m_avg">Ticket moyen</small><strong><span id="k-avg">1 340</span> DA</strong></div>
+      </div>
+      <div class="orders" id="orders" aria-live="off">
+        <div class="o"><span>Table 4 · 2 plats, 1 boisson</span><em class="new">NOUVELLE</em></div>
+        <div class="o"><span>Comptoir · 3 articles</span><em class="wait">EN CUISINE</em></div>
+        <div class="o"><span>Table 7 · 4 articles</span><em class="ok">SERVIE</em></div>
+      </div>
+      <div class="bars" aria-hidden="true"><i style="--h:35%"></i><i style="--h:52%"></i><i style="--h:44%"></i><i style="--h:70%"></i><i style="--h:100%"></i><i style="--h:78%"></i><i style="--h:58%"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- FACTS STRIP -->
+<section class="facts" aria-label="Meida en bref">
+  <div class="wrap">
+    <div><strong class="count" data-to="1">1</strong><span data-i18n="f1">plateforme pour toute l'équipe</span></div>
+    <div><strong class="count" data-to="2">2</strong><span data-i18n="f2">langues : français et arabe</span></div>
+    <div><strong class="count" data-to="7">7</strong><span data-i18n="f3">jours pour être opérationnel</span></div>
+    <div><strong class="count" data-to="20">20</strong><span data-i18n="f4">minutes pour une démo chez vous</span></div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="problems">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow" data-i18n="p_eyebrow">Le constat</span>
+      <h2 data-i18n="p_h2">Ce qui fait mal à un patron aujourd'hui</h2>
+      <p class="lead" data-i18n="p_lead">Si vous vous reconnaissez dans une de ces phrases, Meida est fait pour vous.</p>
+    </div>
+    <div class="grid g4">
+      <div class="card reveal"><span class="num">01</span><p class="quote" data-i18n="p1t">« Je ne connais pas mes vrais chiffres »</p><p data-i18n="p1">Les ventes sont comptées à la main le soir. Vous le savez tard, ou jamais.</p></div>
+      <div class="card reveal"><span class="num">02</span><p class="quote" data-i18n="p2t">« De l'argent disparaît »</p><p data-i18n="p2">Tickets papier, erreurs, commandes perdues. Aucune clôture de caisse claire.</p></div>
+      <div class="card reveal"><span class="num">03</span><p class="quote" data-i18n="p3t">« Le coup de feu est chaotique »</p><p data-i18n="p3">Commandes criées ou griffonnées. La cuisine et le comptoir perdent du temps.</p></div>
+      <div class="card reveal"><span class="num">04</span><p class="quote" data-i18n="p4t">« Mon menu fait vieux »</p><p data-i18n="p4">Menus imprimés, prix difficiles à changer. Vos clients attendent mieux.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="meida">
+  <div class="wrap about">
+    <div class="panel reveal">
+      <span class="eyebrow gold" data-i18n="a_eyebrow">C'est quoi Meida ?</span>
+      <h3 data-i18n="a_h3">Tout est sur la table.</h3>
+      <p data-i18n="a_p">Meida est une plateforme de gestion pensée pour les établissements algériens. Elle réunit dans un seul outil tout ce qu'il faut pour servir, encaisser et piloter. Son nom vient de la table, <b>مائدة</b> en arabe : un endroit ouvert, partagé et transparent.</p>
+      <div class="chain"><span data-i18n="c1">Commande</span><span data-i18n="c2">Cuisine</span><span data-i18n="c3">Service</span><span data-i18n="c4">Caisse</span><span data-i18n="c5">Rapports</span></div>
+    </div>
+    <div class="reveal">
+      <h2 data-i18n="a_h2">Une seule plateforme pour toute votre équipe</h2>
+      <p class="lead" data-i18n="a_lead">Le serveur prend la commande, la cuisine la voit, la caisse se clôture proprement et vous suivez vos ventes du jour, où que vous soyez.</p>
+      <ul class="checks">
+        <li data-i18n="a_l1"><b>Simple à utiliser.</b> Votre équipe comprend l'écran en quelques minutes.</li>
+        <li data-i18n="a_l2"><b>Fait pour l'Algérie.</b> Français, arabe, dinars, habitudes locales.</li>
+        <li data-i18n="a_l3"><b>Accompagnement inclus.</b> Nous installons, nous formons votre équipe, nous restons disponibles.</li>
+        <li data-i18n="a_l4"><b>Prix clair.</b> Un abonnement mensuel, sans frais cachés.</li>
+      </ul>
+      <p class="by" data-i18n="a_by">Meida est développé par <b>Dzira Technology</b>, entreprise technologique algérienne.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT TOUR -->
+<section id="apercu" class="tour">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow gold" data-i18n="t_eyebrow">Aperçu</span>
+      <h2 data-i18n="t_h2">Découvrez Meida en 4 écrans</h2>
+      <p class="lead" data-i18n="t_lead">Cliquez pour voir comment chaque poste de votre établissement travaille.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Écrans Meida">
+      <button role="tab" id="tab-1" aria-controls="pan-1" aria-selected="true" data-i18n="tab1">Caisse</button>
+      <button role="tab" id="tab-2" aria-controls="pan-2" aria-selected="false" tabindex="-1" data-i18n="tab2">Cuisine</button>
+      <button role="tab" id="tab-3" aria-controls="pan-3" aria-selected="false" tabindex="-1" data-i18n="tab3">Menu QR</button>
+      <button role="tab" id="tab-4" aria-controls="pan-4" aria-selected="false" tabindex="-1" data-i18n="tab4">Rapports</button>
+    </div>
+    <div class="panes">
+      <!-- Caisse -->
+      <div class="pane" id="pan-1" role="tabpanel" aria-labelledby="tab-1">
+        <div class="pane-copy">
+          <h3 data-i18n="tp1h">Une caisse rapide, même au coup de feu</h3>
+          <p data-i18n="tp1p">Touchez les plats, ajustez, encaissez. Plusieurs commandes ouvertes en même temps, remises et annulations réservées aux personnes autorisées.</p>
+          <ul class="checks"><li data-i18n="tp1a">Tables et comptoir sur le même écran</li><li data-i18n="tp1b">Impression directe des tickets (Professional)</li><li data-i18n="tp1c">Ouverture et clôture de caisse avec écarts visibles</li></ul>
+        </div>
+        <div class="screen pos">
+          <div class="pos-menu">
+            <button type="button"><b>Pizza Margherita</b><span>900 DA</span></button>
+            <button type="button"><b>Burger maison</b><span>1 100 DA</span></button>
+            <button type="button"><b>Salade César</b><span>800 DA</span></button>
+            <button type="button"><b>Tajine poulet</b><span>1 400 DA</span></button>
+            <button type="button"><b>Jus d'orange</b><span>300 DA</span></button>
+            <button type="button"><b>Café crème</b><span>200 DA</span></button>
+          </div>
+          <div class="pos-ticket">
+            <h4>Table 4</h4>
+            <div class="line"><span>1 × Burger maison</span><b>1 100</b></div>
+            <div class="line"><span>1 × Pizza Margherita</span><b>900</b></div>
+            <div class="line"><span>2 × Jus d'orange</span><b>600</b></div>
+            <div class="total"><span>Total</span><b>2 600 DA</b></div>
+            <span class="payb">Encaisser</span>
+          </div>
+        </div>
+      </div>
+      <!-- Cuisine -->
+      <div class="pane" id="pan-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+        <div class="pane-copy">
+          <h3 data-i18n="tp2h">La cuisine voit tout, en temps réel</h3>
+          <p data-i18n="tp2p">Chaque commande arrive avec son statut. Fini les papiers perdus et les plats oubliés : la cuisine, le bar et le comptoir restent synchronisés.</p>
+          <ul class="checks"><li data-i18n="tp2a">Commandes classées par statut</li><li data-i18n="tp2b">Envoi séparé cuisine et bar (Professional)</li><li data-i18n="tp2c">Moins d'erreurs, service plus rapide</li></ul>
+        </div>
+        <div class="screen kds">
+          <div class="col"><h4>Nouvelles</h4><div class="tk"><b>#112 · Table 4</b><span>1 Burger · 1 Pizza</span></div><div class="tk"><b>#113 · Comptoir</b><span>2 Salades</span></div></div>
+          <div class="col"><h4>En préparation</h4><div class="tk hot"><b>#110 · Table 7</b><span>2 Tajines · 1 Burger</span></div></div>
+          <div class="col"><h4>Prêtes</h4><div class="tk done"><b>#109 · Table 2</b><span>1 Pizza</span></div><div class="tk done"><b>#108 · Comptoir</b><span>3 Cafés</span></div></div>
+        </div>
+      </div>
+      <!-- QR -->
+      <div class="pane" id="pan-3" role="tabpanel" aria-labelledby="tab-3" hidden>
+        <div class="pane-copy">
+          <h3 data-i18n="tp3h">Un menu digital que vos clients adorent</h3>
+          <p data-i18n="tp3p">Un QR code sur la table, un menu propre en français et en arabe. Vous changez un prix ou un plat en quelques secondes, sans réimprimer.</p>
+          <ul class="checks"><li data-i18n="tp3a">Français et arabe, au choix du client</li><li data-i18n="tp3b">Prix et plats modifiables à tout moment</li><li data-i18n="tp3c">Le client commande et suit sa commande depuis son téléphone</li></ul>
+        </div>
+        <div class="screen qr">
+          <div class="phone">
+            <div class="ph-top"><b>Chez Meida</b><span class="lg"><i class="on">FR</i><i>ع</i></span></div>
+            <div class="ph-cat"><i class="on">Plats</i><i>Boissons</i><i>Desserts</i></div>
+            <div class="ph-item"><div><b>Burger maison</b><span>Bœuf, cheddar, sauce maison</span></div><em>1 100 DA</em></div>
+            <div class="ph-item"><div><b>Pizza Margherita</b><span>Tomate, mozzarella, basilic</span></div><em>900 DA</em></div>
+            <div class="ph-item"><div><b>Salade César</b><span>Poulet, parmesan, croûtons</span></div><em>800 DA</em></div>
+          </div>
+          <div class="qrbox"><svg viewBox="0 0 29 29" aria-hidden="true"><path id="qrp" fill="#234737"/></svg><span>Scannez pour voir le menu</span></div>
+        </div>
+      </div>
+      <!-- Rapports -->
+      <div class="pane" id="pan-4" role="tabpanel" aria-labelledby="tab-4" hidden>
+        <div class="pane-copy">
+          <h3 data-i18n="tp4h">Vos chiffres, chaque jour, où que vous soyez</h3>
+          <p data-i18n="tp4p">Ventes, commandes, ticket moyen. Vous décidez avec des chiffres exacts, pas avec des impressions de fin de soirée.</p>
+          <ul class="checks"><li data-i18n="tp4a">Rapport de ventes quotidien</li><li data-i18n="tp4b">Tableau de bord en direct (Professional)</li><li data-i18n="tp4c">Stock et coût des recettes (Professional)</li></ul>
+        </div>
+        <div class="screen rep">
+          <div class="rep-k"><div><small>Ventes de la semaine</small><strong>512 400 DA</strong></div><div><small>Commandes</small><strong>388</strong></div><div><small>Ticket moyen</small><strong>1 320 DA</strong></div></div>
+          <div class="rep-chart" aria-hidden="true">
+            <div><i style="--h:48%"></i><span>Lun</span></div><div><i style="--h:56%"></i><span>Mar</span></div><div><i style="--h:52%"></i><span>Mer</span></div><div><i style="--h:68%"></i><span>Jeu</span></div><div><i style="--h:92%"></i><span>Ven</span></div><div class="top"><i style="--h:100%"></i><span>Sam</span></div><div><i style="--h:74%"></i><span>Dim</span></div>
+          </div>
+          <p class="ex">Données d'exemple</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="fonctions" class="features">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow" data-i18n="fe_eyebrow">Fonctions</span>
+      <h2 data-i18n="fe_h2">Ce que Meida fait pour vous</h2>
+      <p class="lead" data-i18n="fe_lead">Du premier client à la clôture du soir.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card feat reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><h3 data-i18n="fe1t">Prendre les commandes</h3><p data-i18n="fe1">Une caisse rapide pour le comptoir et les tables. Plusieurs commandes ouvertes, remises et annulations avec permissions, tickets et historique.</p></div>
+      <div class="card feat reveal"><div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16M8 15h3"/></svg></div><h3 data-i18n="fe2t">Clôturer la caisse</h3><p data-i18n="fe2">Ouverture et clôture de chaque service avec des totaux clairs et les écarts visibles. Plus de caisse floue le soir.</p></div>
+      <div class="card feat reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M5 11h14a6 6 0 0 1-6 6h-2a6 6 0 0 1-6-6zM9 7c0-1.5 1.5-1.5 1.5-3M14 7c0-1.5 1.5-1.5 1.5-3"/></svg></div><h3 data-i18n="fe3t">Écran cuisine</h3><p data-i18n="fe3">Les commandes arrivent en cuisine avec leur statut. Moins d'erreurs, un service plus rapide au coup de feu.</p></div>
+      <div class="card feat reveal"><div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><path d="M14 14h2v2h-2zM18 18h2v2h-2zM14 18h2"/></svg></div><h3 data-i18n="fe4t">Menu digital par QR code</h3><p data-i18n="fe4">Un menu propre, en français et en arabe, que vos clients ouvrent depuis leur téléphone. Vos prix se changent en quelques secondes.</p></div>
+      <div class="card feat reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M5 19V9M12 19V5M19 19v-7"/></svg></div><h3 data-i18n="fe5t">Rapports quotidiens</h3><p data-i18n="fe5">Vos ventes, vos commandes et votre ticket moyen, chaque jour. Vous décidez avec des chiffres, pas avec des impressions.</p></div>
+      <div class="card feat reveal"><div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.500-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3 data-i18n="fe6t">Permissions et sécurité</h3><p data-i18n="fe6">Chaque employé a son accès. Les actions sensibles sont limitées et gardent une trace.</p></div>
+    </div>
+    <p class="fine dark reveal" data-i18n="fe_note">Les plans Professional, Business et Enterprise ajoutent l'envoi cuisine et bar, le stock, le tableau de bord en direct, le multi-caisses, la commande en ligne et plus encore. Voir les offres ci-dessous.</p>
+  </div>
+</section>
+
+<!-- VENUES -->
+<section id="pour-qui" class="venues">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow" data-i18n="v_eyebrow">Pour qui</span>
+      <h2 data-i18n="v_h2">Pour tous les établissements qui servent</h2>
+      <p class="lead" data-i18n="v_lead">Du café de quartier à l'adresse haut de gamme.</p>
+    </div>
+    <div class="grid g4">
+      <div class="tile reveal"><h3 data-i18n="v1t">Restaurants</h3><p data-i18n="v1">Tables, services, cuisine et addition sans erreur.</p></div>
+      <div class="tile reveal"><h3 data-i18n="v2t">Cafés</h3><p data-i18n="v2">Comptoir rapide, menu QR, caisse claire.</p></div>
+      <div class="tile reveal"><h3 data-i18n="v3t">Fast-food</h3><p data-i18n="v3">Gros volumes, files fluides, cuisine synchronisée.</p></div>
+      <div class="tile reveal"><h3 data-i18n="v4t">Lounges</h3><p data-i18n="v4">Tables, zones et suivi des ventes de la soirée.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calculateur" class="calc">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow gold" data-i18n="ca_eyebrow">Calculateur</span>
+      <h2 data-i18n="ca_h2">Combien une caisse floue vous coûte-t-elle ?</h2>
+      <p class="lead" data-i18n="ca_lead">Renseignez votre activité. Le calculateur estime l'argent qui peut s'évaporer chaque mois et vous suggère le plan adapté.</p>
+    </div>
+    <div class="calc-box reveal">
+      <form class="calc-in" id="calc" onsubmit="return false">
+        <label><span data-i18n="ca_c">Clients servis par jour</span><b id="o-covers">120</b>
+          <input type="range" id="i-covers" min="20" max="600" step="5" value="120"></label>
+        <label><span data-i18n="ca_t">Ticket moyen (DA)</span><b id="o-ticket">1 300 DA</b>
+          <input type="range" id="i-ticket" min="300" max="6000" step="50" value="1300"></label>
+        <label><span data-i18n="ca_d">Jours d'ouverture par mois</span><b id="o-days">26</b>
+          <input type="range" id="i-days" min="10" max="31" step="1" value="26"></label>
+        <label><span data-i18n="ca_l">Écart de caisse estimé (erreurs, oublis, pertes)</span><b id="o-leak">2 %</b>
+          <input type="range" id="i-leak" min="0.5" max="8" step="0.5" value="2"></label>
+        <fieldset>
+          <legend data-i18n="ca_s">Nombre d'établissements</legend>
+          <div class="seg" id="i-sites">
+            <label><input type="radio" name="sites" value="1" checked><span>1</span></label>
+            <label><input type="radio" name="sites" value="2"><span>2 – 3</span></label>
+            <label><input type="radio" name="sites" value="4"><span>4 – 10</span></label>
+            <label><input type="radio" name="sites" value="11"><span>10+</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend data-i18n="ca_n">Dont vous avez besoin</legend>
+          <label class="chk"><input type="checkbox" id="i-need"><span data-i18n="ca_need">Stock, tableau de bord en direct, envoi cuisine et bar, plusieurs caisses</span></label>
+        </fieldset>
+      </form>
+      <div class="calc-out" aria-live="polite">
+        <small data-i18n="ca_o1">Ventes mensuelles estimées</small>
+        <strong id="r-rev">3 380 000 DA</strong>
+        <div class="leak"><small data-i18n="ca_o2">Argent qui peut s'évaporer chaque mois</small><b id="r-leak">67 600 DA</b></div>
+        <p class="ratio" data-i18n="ca_ratio">Même un petit écart pèse sur votre marge chaque mois.</p>
+        <div class="reco"><small data-i18n="ca_o3">Plan suggéré</small><b id="r-plan">Essential</b></div>
+        <a class="btn btn-brass" id="r-cta" href="#contact" data-i18n="ca_cta">Demander une démo pour ce plan</a>
+        <p class="disc" data-i18n="ca_disc">Estimation indicative basée sur vos réponses, pas une promesse de résultat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow" data-i18n="s_eyebrow">Démarrer</span>
+      <h2 data-i18n="s_h2">Opérationnel en une semaine</h2>
+      <p class="lead" data-i18n="s_lead">Nous nous occupons de l'installation. Vous gardez votre énergie pour vos clients.</p>
+    </div>
+    <div class="grid g3 timeline">
+      <div class="step reveal"><span class="num">1</span><h3 data-i18n="s1t">Vous choisissez un plan</h3><p data-i18n="s1">Un conseiller vous présente Meida avec une démonstration de 20 minutes, dans votre établissement.</p></div>
+      <div class="step reveal"><span class="num">2</span><h3 data-i18n="s2t">Nous installons</h3><p data-i18n="s2">Nous créons votre compte avec votre menu, vos prix et vos équipes, puis nous formons votre personnel.</p></div>
+      <div class="step reveal"><span class="num">3</span><h3 data-i18n="s3t">Vous ouvrez votre premier service</h3><p data-i18n="s3">Vous prenez vos commandes et clôturez votre caisse avec Meida. Nous restons disponibles la première semaine.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="offres" class="pricing">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow gold" data-i18n="o_eyebrow">Offres</span>
+      <h2 data-i18n="o_h2">Un plan pour chaque établissement</h2>
+      <p class="lead" data-i18n="o_lead">Les plans diffèrent par leurs fonctions et leurs limites. Le tarif est établi sur devis, selon votre établissement.</p>
+    </div>
+    <div class="plans">
+      <article class="plan pop reveal">
+        <span class="badge" data-i18n="badge">Pour démarrer</span>
+        <h3>Essential</h3>
+        <p class="for" data-i18n="e_for">Un établissement qui veut une caisse claire et un menu QR.</p>
+        <p class="lim" data-i18n="e_lim">1 établissement · 1 caisse · 5 employés · 90 jours d'historique</p>
+        <ul>
+          <li data-i18n="e1">Caisse : commandes, paiements, tickets et historique</li>
+          <li data-i18n="e2">Remises et annulations avec permissions</li>
+          <li data-i18n="e3">Ouverture et clôture de caisse, écarts visibles</li>
+          <li data-i18n="e4">Écran cuisine avec statut par plat</li>
+          <li data-i18n="e5">Menu QR français et arabe : le client commande et suit sa commande</li>
+          <li data-i18n="e6">QR à emporter au comptoir, appel du serveur</li>
+          <li data-i18n="e7">Rapport quotidien, rapports de caisse, tableau de bord du jour à distance</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact" data-pick="Essential" data-i18n="cta_demo">Demander une démo</a>
+      </article>
+      <article class="plan reveal">
+        <h3>Professional</h3>
+        <p class="for" data-i18n="p_for">Établissements très actifs, service en salle complet.</p>
+        <p class="lim" data-i18n="p_lim">Jusqu'à 3 établissements · 3 caisses · 15 employés · 1 an d'historique</p>
+        <ul>
+          <li class="inc" data-i18n="inc_e">Tout Essential, plus :</li>
+          <li data-i18n="pr1">Envoi des commandes par poste (cuisine, bar)</li>
+          <li data-i18n="pr2">Serveurs affectés aux tables, validation des commandes QR</li>
+          <li data-i18n="pr3">Tableau de bord en direct, ventes par heure et par employé</li>
+          <li data-i18n="pr4">Stock, alertes et coût des recettes</li>
+          <li data-i18n="pr5">Impression directe sur imprimante thermique</li>
+          <li data-i18n="pr6">Plusieurs caisses, passation de service, notifications</li>
+          <li data-i18n="pr7">Export complet des données</li>
+          <li class="opt" data-i18n="pr_opt">En option : planning du personnel, commande en ligne et livraison</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact" data-pick="Professional" data-i18n="cta_demo">Demander une démo</a>
+      </article>
+      <article class="plan reveal">
+        <h3>Business</h3>
+        <p class="for" data-i18n="b_for">Grandes équipes et petites chaînes.</p>
+        <p class="lim" data-i18n="b_lim">Jusqu'à 10 établissements · 10 caisses · 40 employés · historique illimité</p>
+        <ul>
+          <li class="inc" data-i18n="inc_p">Tout Professional, plus :</li>
+          <li data-i18n="bu1">Commande en ligne avec livraison</li>
+          <li data-i18n="bu2">Planning, pointage, congés et formation du personnel</li>
+          <li data-i18n="bu3">Tendances, rentabilité du menu et prévisions</li>
+          <li data-i18n="bu4">Rapports personnalisés et programmés, alertes d'anomalies</li>
+          <li data-i18n="bu5">Approbations et journal d'audit avancé</li>
+          <li data-i18n="bu6">Exports programmés</li>
+          <li class="opt" data-i18n="bu_opt">En option : comparaison des établissements, export de paie</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact" data-pick="Business" data-i18n="cta_demo">Demander une démo</a>
+      </article>
+      <article class="plan reveal">
+        <h3>Enterprise</h3>
+        <p class="for" data-i18n="g_for">Groupes et réseaux multi-sites.</p>
+        <p class="lim" data-i18n="g_lim">Établissements, caisses et employés sans limite</p>
+        <ul>
+          <li class="inc" data-i18n="inc_b">Tout Business, plus :</li>
+          <li data-i18n="pg1">Tableau de bord consolidé de tous vos établissements</li>
+          <li data-i18n="pg2">Comparaison des établissements</li>
+          <li data-i18n="pg3">Pointage et export de paie</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact" data-pick="Enterprise" data-i18n="g_cta">Demander un devis</a>
+      </article>
+    </div>
+
+    <div class="terms">
+      <div class="reveal"><b data-i18n="tm1t">Engagement de 3 mois</b><span data-i18n="tm1">Chaque abonnement commence à 3 mois minimum, pour voir les résultats et former votre équipe.</span></div>
+      <div class="reveal"><b data-i18n="tm2t">Tarif sur devis</b><span data-i18n="tm2">Un conseiller vous propose un tarif adapté à votre établissement après la démo.</span></div>
+      <div class="reveal"><b data-i18n="tm3t">Paiement simple</b><span data-i18n="tm3">Virement, CCP, carte ou espèces contre reçu. Toujours à Meida, avec facture.</span></div>
+    </div>
+
+    <details class="compare reveal">
+      <summary data-i18n="cmp">Comparer les plans en détail</summary>
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th data-i18n="cmp_f">Fonction</th><th>Essential</th><th>Professional</th><th>Business</th><th>Enterprise</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="r1">Caisse, tickets, remises et annulations avec permissions</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r2">Ouverture et clôture de caisse, rapports de caisse</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r3">Menu QR français et arabe, commande et suivi par le client</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r4">QR à emporter au comptoir, appel du serveur</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r5">Écran cuisine avec statut par plat</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r6">Rapport quotidien, tableau de bord du jour à distance</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r7">Envoi par poste (cuisine, bar)</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r8">Serveurs affectés aux tables, validation des commandes QR</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r9">Tableau de bord en direct, ventes par heure et par employé</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r10">Stock, alertes et coût des recettes</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r11">Impression directe sur imprimante thermique</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r12">Export complet des données</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r13">Commande en ligne avec livraison</td><td class="n">–</td><td class="o" data-i18n="opt">Option</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r14">Planning, pointage, congés et formation du personnel</td><td class="n">–</td><td class="o" data-i18n="opt">Option</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r15">Tendances, prévisions, rapports personnalisés et programmés</td><td class="n">–</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r16">Approbations et journal d'audit avancé</td><td class="n">–</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r17">Comparaison des établissements, export de paie</td><td class="n">–</td><td class="n">–</td><td class="o" data-i18n="opt">Option</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r18">Tableau de bord consolidé multi-établissements</td><td class="n">–</td><td class="n">–</td><td class="n">–</td><td class="y">✓</td></tr>
+          <tr><td data-i18n="r19">Établissements</td><td>1</td><td>3</td><td>10</td><td data-i18n="nolim">Sans limite</td></tr>
+          <tr><td data-i18n="r20">Caisses</td><td>1</td><td>3</td><td>10</td><td data-i18n="nolim">Sans limite</td></tr>
+          <tr><td data-i18n="r21">Employés</td><td>5</td><td>15</td><td>40</td><td data-i18n="nolim">Sans limite</td></tr>
+          <tr><td data-i18n="r22">Historique des rapports</td><td data-i18n="d90">90 jours</td><td data-i18n="y1">1 an</td><td data-i18n="nolim">Sans limite</td><td data-i18n="nolim">Sans limite</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </details>
+    <p class="fine reveal" data-i18n="o_fine">Installation et formation incluses. Les équipements (tablettes, imprimantes, tiroirs-caisses) ne sont pas inclus sauf mention contraire.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow" data-i18n="q_eyebrow">Questions</span>
+      <h2 data-i18n="q_h2">Vos questions fréquentes</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal"><summary data-i18n="q1t">De quel matériel ai-je besoin ?</summary><p data-i18n="q1">D'une tablette ou d'un ordinateur et d'une connexion internet. Une imprimante de tickets est conseillée. Nous vous aidons à choisir le matériel adapté à votre établissement.</p></details>
+      <details class="reveal"><summary data-i18n="q2t">Mon équipe saura-t-elle l'utiliser ?</summary><p data-i18n="q2">Meida est conçu pour être compris en quelques minutes. Nous formons votre équipe pendant l'installation et nous restons joignables la première semaine.</p></details>
+      <details class="reveal"><summary data-i18n="q3t">Pourquoi un engagement de 3 mois ?</summary><p data-i18n="q3">Trois mois laissent le temps à votre équipe de s'habituer et à vous de voir la différence sur votre caisse et vos chiffres. Nous ne vendons pas d'abonnement d'un mois.</p></details>
+      <details class="reveal"><summary data-i18n="q4t">Comment payer ?</summary><p data-i18n="q4">Par virement, CCP, carte ou espèces contre reçu. Le paiement se fait toujours à Meida, jamais à un intermédiaire, et vous recevez une facture.</p></details>
+      <details class="reveal"><summary data-i18n="q5t">Puis-je changer de plan plus tard ?</summary><p data-i18n="q5">Oui. Vous pouvez passer à un plan supérieur à tout moment. Le nouveau tarif s'applique à la prochaine échéance.</p></details>
+      <details class="reveal"><summary data-i18n="q6t">Et mes données ?</summary><p data-i18n="q6">Vos données vous appartiennent. Nous les protégeons, nous ne les utilisons que pour faire fonctionner Meida, et vous pouvez les exporter.</p></details>
+      <details class="reveal"><summary data-i18n="q7t">Je suis déjà client : où me connecter ?</summary><p data-i18n="q7">Utilisez le bouton « Se connecter » en haut de la page pour accéder à votre plateforme.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="final">
+  <div class="glow g1"></div>
+  <div class="wrap contact">
+    <div class="c-copy">
+      <h2 data-i18n="ct_h2">Prêt à mettre tout sur la table ?</h2>
+      <p data-i18n="ct_p">Demandez une démonstration de 20 minutes dans votre établissement. Nous vous répondons rapidement.</p>
+      <ul class="c-list">
+        <li><b data-i18n="ct_mail">E-mail</b><a data-mail href="mailto:contact@meida.dz">contact@meida.dz</a></li>
+        <li class="wa-li"><b>WhatsApp</b><a data-wa href="#" target="_blank" rel="noopener">—</a></li>
+      </ul>
+      <a class="btn btn-ghost" data-login href="https://platform.getmeida.com/login" data-i18n="ct_login">Déjà client ? Se connecter</a>
+    </div>
+    <form class="form" id="lead" novalidate>
+      <div class="row">
+        <label><span data-i18n="fm_name">Votre nom</span><input name="name" autocomplete="name" required></label>
+        <label><span data-i18n="fm_phone">Téléphone</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="05 / 06 / 07 …"></label>
+      </div>
+      <div class="row">
+        <label><span data-i18n="fm_venue">Nom de l'établissement</span><input name="venue" required></label>
+        <label><span data-i18n="fm_type">Type</span>
+          <select name="type"><option value="Restaurant" data-i18n="v1t">Restaurants</option><option value="Café" data-i18n="v2t">Cafés</option><option value="Fast-food" data-i18n="v3t">Fast-food</option><option value="Lounge" data-i18n="v4t">Lounges</option></select></label>
+      </div>
+      <div class="row">
+        <label><span data-i18n="fm_city">Ville</span>
+          <select name="city"><option>Alger</option><option>Oran</option><option>Constantine</option><option>Blida</option><option>Tipaza</option><option>Boumerdès</option><option>Sétif</option><option>Annaba</option><option>Béjaïa</option><option>Tizi Ouzou</option><option>Batna</option><option>Tlemcen</option><option value="Autre" data-i18n="other">Autre</option></select></label>
+        <label><span data-i18n="fm_plan">Plan souhaité</span>
+          <select name="plan" id="f-plan"><option value="Essential">Essential</option><option value="Professional">Professional</option><option value="Business">Business</option><option value="Enterprise">Enterprise</option><option value="Je ne sais pas" data-i18n="notsure">Je ne sais pas encore</option></select></label>
+      </div>
+      <label><span data-i18n="fm_msg">Message (facultatif)</span><textarea name="msg" rows="3"></textarea></label>
+      <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+      <p class="err" id="f-err" role="alert" hidden></p>
+      <div class="f-actions">
+        <button class="btn btn-brass" type="submit" data-i18n="fm_send">Envoyer ma demande</button>
+        <button class="btn btn-wa" type="button" id="f-wa" data-i18n="fm_wa">Envoyer par WhatsApp</button>
+      </div>
+      <p class="ok" id="f-ok" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/wm_cream.png" alt="Meida" width="100" height="37">
+    <span data-i18n="ft">© 2026 Dzira Technology. Tous droits réservés.</span>
+    <nav aria-label="Pied de page"><a href="#offres" data-i18n="nav_offers">Offres</a><a href="#faq" data-i18n="nav_faq">Questions</a><a href="#contact">Contact</a><a data-login href="https://platform.getmeida.com/login" data-i18n="login">Se connecter</a></nav>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><a class="btn btn-primary" data-login href="https://platform.getmeida.com/login" data-i18n="login">Se connecter</a><a class="btn btn-brass" href="#contact" data-i18n="demo">Demander une démo</a></div>
+<button class="totop" id="totop" type="button" aria-label="Haut de page">↑</button>
+
+<script src="script.js" defer></script>
+</body>
+</html>
