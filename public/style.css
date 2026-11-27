@@ -58,6 +58,7 @@ section{padding:100px 0;position:relative}
 .menu a.btn-primary{color:var(--cream)}
 .lang{background:transparent;border:1.5px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:700;font-size:.85rem;color:var(--green);transition:border-color .2s,background .2s}
 .lang:hover{border-color:var(--brass);background:#fff}
+.menu a.lang{display:inline-block;padding:6px 14px;font-weight:700;font-size:.85rem;line-height:1.6}.menu a.lang::after{content:none}
 .burger,#nav-toggle{display:none}
 /* hero */
 .hero{background:radial-gradient(1200px 600px at 80% -10%,#2f5a47 0%,transparent 60%),var(--green);color:var(--cream);padding:90px 0 110px;overflow:hidden}
@@ -70,6 +71,7 @@ section{padding:100px 0;position:relative}
 .hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--gold),#f4dca8 60%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .lead{color:#d7ded4;margin:24px 0 34px}
 .hero .eyebrow{color:var(--gold)}
+.hero h1 .eyebrow{display:flex;width:fit-content;font-family:var(--sans);line-height:1.6}
 .cta{display:flex;gap:14px;flex-wrap:wrap}
 .hero .btn-ghost{border-color:rgba(241,229,212,.6);color:var(--cream)}
 .hero .btn-ghost:hover{background:var(--cream);color:var(--green)}

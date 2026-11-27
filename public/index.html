@@ -4,26 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meida | La plateforme de gestion pour restaurants, cafés et fast-foods</title>
-<meta name="description" content="Meida réunit caisse, cuisine, menu QR et rapports dans une seule plateforme. De la commande à la caisse, pour les restaurants, cafés, fast-foods et lounges en Algérie.">
+<meta name="description" content="Logiciel de caisse et de gestion pour restaurants, cafés et fast-foods en Algérie : caisse, écran cuisine, menu QR et rapports, en français et en arabe.">
 <meta name="theme-color" content="#234737">
 <link rel="canonical" href="https://getmeida.com/">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/InterDisplay-Black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="alternate" hreflang="fr-DZ" href="https://getmeida.com/">
+<link rel="alternate" hreflang="ar-DZ" href="https://getmeida.com/ar/">
+<link rel="alternate" hreflang="x-default" href="https://getmeida.com/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/InterDisplay-Black.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_DZ">
+<meta property="og:locale:alternate" content="ar_DZ">
 <meta property="og:site_name" content="Meida">
 <meta property="og:title" content="Meida | Une plateforme. De la commande à la caisse.">
 <meta property="og:description" content="Caisse, cuisine, menu QR et rapports dans une seule plateforme pour restaurants, cafés et fast-foods en Algérie.">
 <meta property="og:url" content="https://getmeida.com/">
 <meta property="og:image" content="https://getmeida.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Meida, la plateforme de gestion pour restaurants">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Meida","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Plateforme de gestion pour restaurants, cafés et fast-foods : caisse, cuisine, menu QR, rapports.","publisher":{"@type":"Organization","name":"Dzira Technology","url":"https://getmeida.com/"}}</script>
+<meta name="twitter:title" content="Meida | Une plateforme. De la commande à la caisse.">
+<meta name="twitter:description" content="Caisse, cuisine, menu QR et rapports dans une seule plateforme pour restaurants, cafés et fast-foods en Algérie.">
+<meta name="twitter:image" content="https://getmeida.com/assets/og-image.png">
+<meta name="twitter:image:alt" content="Meida, la plateforme de gestion pour restaurants">
+<!-- structured data (Organization, WebSite, SoftwareApplication, FAQPage) is added by build.mjs -->
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
@@ -31,7 +42,7 @@
 
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Meida"><img src="assets/wm_green.png" alt="Meida" width="120" height="45"></a>
+    <a class="logo" href="#top" aria-label="Meida"><img src="/assets/wm_green.png" alt="Meida" width="120" height="45"></a>
     <input type="checkbox" id="nav-toggle" aria-label="Menu">
     <label class="burger" for="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
     <ul class="menu" id="menu">
@@ -41,7 +52,7 @@
       <li><a href="#calculateur" data-i18n="nav_calc">Calculateur</a></li>
       <li><a href="#offres" data-i18n="nav_offers">Offres</a></li>
       <li><a href="#faq" data-i18n="nav_faq">Questions</a></li>
-      <li class="lang-li"><button class="lang" id="lang" type="button" aria-label="Changer de langue / تغيير اللغة"><span data-lang-label>العربية</span></button></li>
+      <li class="lang-li"><a class="lang" id="lang" href="/ar/" hreflang="ar" lang="ar" aria-label="Changer de langue / تغيير اللغة">العربية</a></li>
       <li><a class="btn btn-primary btn-sm" data-login href="https://platform.getmeida.com/login" data-i18n="login">Se connecter</a></li>
     </ul>
   </div>
@@ -54,8 +65,7 @@
   <div class="glow g1"></div><div class="glow g2"></div>
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow" data-i18n="hero_eyebrow">Gestion de restaurant</span>
-      <h1><span data-i18n="hero_h1a">Une plateforme.</span><br><em data-i18n="hero_h1b">De la commande à la caisse.</em></h1>
+      <h1><span class="eyebrow" data-i18n="hero_eyebrow">Logiciel de caisse pour restaurants en Algérie</span><span data-i18n="hero_h1a">Une plateforme.</span><br><em data-i18n="hero_h1b">De la commande à la caisse.</em></h1>
       <p class="lead" data-i18n="hero_lead">Meida remplace les tickets papier, les calculettes et les comptes approximatifs de fin de journée par un système simple que toute votre équipe utilise.</p>
       <div class="cta">
         <a class="btn btn-primary" data-login href="https://platform.getmeida.com/login" data-i18n="hero_cta1">Accéder à ma plateforme</a>
@@ -464,7 +474,7 @@
       <h2 data-i18n="ct_h2">Prêt à mettre tout sur la table ?</h2>
       <p data-i18n="ct_p">Demandez une démonstration de 20 minutes dans votre établissement. Nous vous répondons rapidement.</p>
       <ul class="c-list">
-        <li><b data-i18n="ct_mail">E-mail</b><a data-mail href="mailto:contact@meida.dz">contact@meida.dz</a></li>
+        <li><b data-i18n="ct_mail">E-mail</b><a data-mail href="mailto:contact@getmeida.com">contact@getmeida.com</a></li>
         <li class="wa-li"><b>WhatsApp</b><a data-wa href="#" target="_blank" rel="noopener">—</a></li>
       </ul>
       <a class="btn btn-ghost" data-login href="https://platform.getmeida.com/login" data-i18n="ct_login">Déjà client ? Se connecter</a>
@@ -501,7 +511,7 @@
 
 <footer>
   <div class="wrap">
-    <img src="assets/wm_cream.png" alt="Meida" width="100" height="37">
+    <img src="/assets/wm_cream.png" alt="Meida" width="100" height="37">
     <span data-i18n="ft">© 2026 Dzira Technology. Tous droits réservés.</span>
     <nav aria-label="Pied de page"><a href="#offres" data-i18n="nav_offers">Offres</a><a href="#faq" data-i18n="nav_faq">Questions</a><a href="#contact">Contact</a><a data-login href="https://platform.getmeida.com/login" data-i18n="login">Se connecter</a></nav>
   </div>
@@ -510,6 +520,6 @@
 <div class="mbar" id="mbar"><a class="btn btn-primary" data-login href="https://platform.getmeida.com/login" data-i18n="login">Se connecter</a><a class="btn btn-brass" href="#contact" data-i18n="demo">Demander une démo</a></div>
 <button class="totop" id="totop" type="button" aria-label="Haut de page">↑</button>
 
-<script src="script.js" defer></script>
+<script src="/script.js" defer></script>
 </body>
 </html>
