@@ -3,7 +3,7 @@
 //  - dist/ar/index.html  Arabic page, generated from public/index.html + i18n/ar.json
 //  - style.css / script.js links get ?v=<content hash>, so nginx can cache them for a year
 // No dependencies: plain Node.
-import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, readdirSync } from "node:fs";
 import { createHash } from "node:crypto";
 
 const SITE = "https://getmeida.com";
@@ -74,6 +74,7 @@ ar = swap(ar, "/fonts/Inter-Regular.woff2", "/fonts/noto-kufi-arabic-arabic-400-
 ar = swap(ar, "/fonts/InterDisplay-Black.woff2", "/fonts/noto-kufi-arabic-arabic-900-normal.woff2");
 ar = swap(ar, '<a class="lang" id="lang" href="/ar/" hreflang="ar" lang="ar"', '<a class="lang" id="lang" href="/" hreflang="fr" lang="fr"');
 ar = swap(ar, 'aria-label="Changer de langue / تغيير اللغة">العربية</a>', 'aria-label="Changer de langue / تغيير اللغة">Français</a>');
+ar = swap(ar, 'href="/logiciel-gestion-restaurant-algerie/"', 'href="/ar/logiciel-gestion-restaurant-algerie/"');
 for (const [fr, tr] of Object.entries(AR.attrs)) ar = ar.split(`aria-label="${fr}"`).join(`aria-label="${tr}"`);
 
 const missing = new Set();
@@ -91,7 +92,10 @@ ar = ar.replace(LD_MARK, jsonLd(ar, "ar-DZ", `${SITE}/ar/`, AR.meta.app_descript
 mkdirSync("dist/ar", { recursive: true });
 writeFileSync("dist/ar/index.html", stamp(ar));
 
-/* ---------- other pages ---------- */
-writeFileSync("dist/404.html", stamp(readFileSync("public/404.html", "utf8")));
+/* ---------- other pages (404, keyword pages): only the ?v= stamp ---------- */
+for (const f of readdirSync("public", { recursive: true })) {
+  const p = String(f).split("\\").join("/");
+  if (p.endsWith(".html") && p !== "index.html") writeFileSync(`dist/${p}`, stamp(readFileSync(`public/${p}`, "utf8")));
+}
 
 console.log(`build.mjs: dist/ ready (${swapped}/${total} Arabic texts, css ${ver["/style.css"]}, js ${ver["/script.js"]})`);

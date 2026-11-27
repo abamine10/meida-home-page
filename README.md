@@ -13,6 +13,7 @@ Plain HTML, CSS and one `script.js` in `public/`. French is at `/`, Arabic (righ
 ## Edit
 
 - Content and plans: `public/index.html`. Arabic text, titles and descriptions are in `i18n/ar.json`, keyed by each element's `data-i18n`. A new `data-i18n` text without an Arabic entry stays in French on `/ar/` (the build prints a warning).
+- Keyword pages are plain HTML, one folder each, French at `public/<slug>/index.html` and Arabic at `public/ar/<slug>/index.html` (e.g. `logiciel-gestion-restaurant-algerie`). Each carries its own canonical, hreflang and structured data; add both URLs to the sitemap and link them from the home page footer.
 - When you change the content, update `<lastmod>` in `public/sitemap.xml`.
 - Settings are in the `CONFIG` block at the top of `public/script.js`: login link, contact e-mail, WhatsApp number and the form endpoint (`https://platform.getmeida.com/leads`: requests land in the Meida admin under Leads, for the admin and sales reps. The platform must list this site in `LEAD_FORM_ORIGINS`. When empty, the form opens the visitor's e-mail app).
 - The plan section mirrors the app's feature catalog (`apps/api/src/entitlements/feature-catalog.ts`) and plan limits. Update it when those change. No prices are shown.
